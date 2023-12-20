@@ -96,7 +96,7 @@ const turnInputIntoMappings = () => {
 
 // this didnt work at all! my intuition was way off, because the actual #s are so high that creating a mapping dict is actually WAY more intensive than iterating over the mappings once per input. trying again
 
-const getMinimumLocation = () => {
+const p1 = () => {
   let allMapGroups = turnInputIntoMappings();
   let mapInput = input.split("\n\n")[0].match(/(\d+)/g);
 
@@ -126,7 +126,7 @@ const getMinimumLocation = () => {
   return minLocation;
 };
 
-// getMinimumLocation()
+// p1()
 
 // --- Part Two ---
 
@@ -137,7 +137,7 @@ for (let i = 0; i < mapInputRaw.length; i += 2) {
   mapInput.push([mapInputRaw[i], mapInputRaw[i + 1]]);
 }
 
-const getMinimumLocation2 = () => {
+const p2 = () => {
   let allMapGroups = turnInputIntoMappings();
   let mapInputRaw = input.split("\n\n")[0].match(/(\d+)/g);
   let mapInput = [];
@@ -203,4 +203,4 @@ const getMinimumLocation2 = () => {
   return globalMinimum;
 };
 
-getMinimumLocation2();
+p2();
